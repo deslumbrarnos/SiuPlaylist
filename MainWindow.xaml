@@ -1,0 +1,182 @@
+﻿<!-- Definición de mi ventanita principal -->
+        <Window x:Class="SiuPlaylist.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SiuPlaylist"
+        mc:Ignorable="d"
+        Title="MIS CANCIONES MÁS ESCUCHADAS ESTE MES, ♡" FontStyle="Italic" Height="350" Width="760"
+        Background="#edede9">
+
+    <!-- Aquí definimos la cuadrícula principal que contiene los botoncitos -->
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Definición de 9 botoncitos, cada uno representando una canción -->
+        <!-- Cada botoncito tiene un menú contextual con opciones para ver el video original o subtitulado -->
+
+        <!-- Botón 1 -->
+        <Button Content="SHE'S NOT AFRAID" 
+                Background="#CC9F69" Foreground="White"
+                FontSize="14" FontWeight="Bold"
+                BorderBrush="White" BorderThickness="2"
+                Cursor="Hand" 
+                MinWidth="220" MinHeight="80"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Click="AbrirVideoConOpciones" Grid.Row="0" Grid.Column="0" Margin="5">
+            <Button.ContextMenu>
+                <ContextMenu x:Name="VideoContextMenu">
+                    <MenuItem Header="Ver Video Original" Click="VerVideoOriginal"/>
+                    <MenuItem Header="Ver Video Subtitulado" Click="VerVideoSubtitulado"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
+        <!-- Botón 2 -->
+        <Button Content="BUSY WOMAN" 
+                Background="#99582A" Foreground="White"
+                FontSize="14" FontWeight="Bold"
+                BorderBrush="White" BorderThickness="2"
+                Cursor="Hand"
+                MinWidth="220" MinHeight="80"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Click="AbrirVideoConOpciones" Grid.Row="0" Grid.Column="1" Margin="5">
+            <Button.ContextMenu>
+                <ContextMenu x:Name="VideoContextMenu1">
+                    <MenuItem Header="Ver Video Original" Click="VerVideoOriginal"/>
+                    <MenuItem Header="Ver Video Subtitulado" Click="VerVideoSubtitulado"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
+        <!-- Botón 3 -->
+        <Button Content="TRAINING SEASON" 
+                Background="#6E4021" Foreground="White"
+                FontSize="14" FontWeight="Bold"
+                BorderBrush="White" BorderThickness="2"
+                Cursor="Hand"
+                MinWidth="220" MinHeight="80"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Click="AbrirVideoConOpciones" Grid.Row="0" Grid.Column="2" Margin="5">
+            <Button.ContextMenu>
+                <ContextMenu x:Name="VideoContextMenu2">
+                    <MenuItem Header="Ver Video Original" Click="VerVideoOriginal"/>
+                    <MenuItem Header="Ver Video Subtitulado" Click="VerVideoSubtitulado"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
+        <!-- Botón 4 -->
+        <Button Content="FROM THE START" 
+                Background="#59341D" Foreground="White"
+                FontSize="14" FontWeight="Bold"
+                BorderBrush="White" BorderThickness="2"
+                Cursor="Hand"
+                MinWidth="220" MinHeight="80"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Click="AbrirVideoConOpciones" Grid.Row="1" Grid.Column="0" Margin="5">
+            <Button.ContextMenu>
+                <ContextMenu x:Name="VideoContextMenu3">
+                    <MenuItem Header="Ver Video Original" Click="VerVideoOriginal"/>
+                    <MenuItem Header="Ver Video Subtitulado" Click="VerVideoSubtitulado"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
+        <!-- Botón 5 -->
+        <Button Content="LOSE MY BREATH" 
+                Background="#432818" Foreground="White"
+                FontSize="14" FontWeight="Bold"
+                BorderBrush="White" BorderThickness="2"
+                Cursor="Hand"
+                MinWidth="220" MinHeight="80"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Click="AbrirVideoConOpciones" Grid.Row="1" Grid.Column="1" Margin="5">
+            <Button.ContextMenu>
+                <ContextMenu x:Name="VideoContextMenu4">
+                    <MenuItem Header="Ver Video Original" Click="VerVideoOriginal"/>
+                    <MenuItem Header="Ver Video Subtitulado" Click="VerVideoSubtitulado"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
+        <!-- Botón 6 -->
+        <Button Content="WICKED GAME" 
+                Background="#7F5E38" Foreground="White"
+                FontSize="14" FontWeight="Bold"
+                BorderBrush="White" BorderThickness="2"
+                Cursor="Hand"
+                MinWidth="220" MinHeight="80"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Click="AbrirVideoConOpciones" Grid.Row="1" Grid.Column="2" Margin="5">
+            <Button.ContextMenu>
+                <ContextMenu x:Name="VideoContextMenu5">
+                    <MenuItem Header="Ver Video Original" Click="VerVideoOriginal"/>
+                    <MenuItem Header="Ver Video Subtitulado" Click="VerVideoSubtitulado"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
+        <!-- Botón 7 -->
+        <Button Content="ALL THAT JAZZ" 
+                Background="#BB9457" Foreground="White"
+                FontSize="14" FontWeight="Bold"
+                BorderBrush="White" BorderThickness="2"
+                Cursor="Hand"
+                MinWidth="220" MinHeight="80"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Click="AbrirVideoConOpciones" Grid.Row="2" Grid.Column="0" Margin="5">
+            <Button.ContextMenu>
+                <ContextMenu x:Name="VideoContextMenu6">
+                    <MenuItem Header="Ver Video Original" Click="VerVideoOriginal"/>
+                    <MenuItem Header="Ver Video Subtitulado" Click="VerVideoSubtitulado"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
+        <!-- Botón 8 -->
+        <Button Content="DONE FOR ME" 
+                Background="#955939" Foreground="White"
+                FontSize="14" FontWeight="Bold"
+                BorderBrush="White" BorderThickness="2"
+                Cursor="Hand"
+                MinWidth="220" MinHeight="80"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Click="AbrirVideoConOpciones" Grid.Row="2" Grid.Column="1" Margin="5">
+            <Button.ContextMenu>
+                <ContextMenu x:Name="VideoContextMenu7">
+                    <MenuItem Header="Ver Video Original" Click="VerVideoOriginal"/>
+                    <MenuItem Header="Ver Video Subtitulado" Click="VerVideoSubtitulado"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+
+        <!-- Botón 9 -->
+        <Button Content="SLOW DANCING" 
+                Background="#823B2A" Foreground="White"
+                FontSize="14" FontWeight="Bold"
+                BorderBrush="White" BorderThickness="2"
+                Cursor="Hand"
+                MinWidth="220" MinHeight="80"
+                HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                Click="AbrirVideoConOpciones" Grid.Row="2" Grid.Column="2" Margin="5">
+            <Button.ContextMenu>
+                <ContextMenu x:Name="VideoContextMenu8">
+                    <MenuItem Header="Ver Video Original" Click="VerVideoOriginal"/>
+                    <MenuItem Header="Ver Video Subtitulado" Click="VerVideoSubtitulado"/>
+                </ContextMenu>
+            </Button.ContextMenu>
+        </Button>
+    </Grid>
+</Window>
